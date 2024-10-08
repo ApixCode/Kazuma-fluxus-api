@@ -14,7 +14,7 @@ app.get("/fluxus/bypass", async (req, res) => {
     if (link.startsWith("https://flux.li/android/external/start.php?HWID=")) {
       try {
         const FluxusAuthResponse = await axios.get(
-          `https://fluxus-bypass-orcin.vercel.app/api/fluxus?link=${encodeURIComponent(link)}`
+          `https://samrat-fluxus-bypass.vercel.app/fluxus/bypass?link=${encodeURIComponent(link)}`
         );
         if (FluxusAuthResponse.data.key) {
           result = FluxusAuthResponse.data.key;
